@@ -15,16 +15,13 @@ Description=Snell Server
 After=network.target
 
 [Service]
-Type=simple
-User=nobody
-Group=nogroup
-LimitNOFILE=32768
 ExecStart=/root/snell-server
-
+Restart=on-failure
+RestartSec=1s
 [Install]
 WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl start snell
 systemctl restart snell
-cat /root/snell-server.conf
+cat /snell-server.conf
