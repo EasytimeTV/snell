@@ -4,9 +4,9 @@ export PATH
 yum install unzip -y
 cd ～
 wget --no-check-certificate -O snell.zip https://github.com/surge-networks/snell/releases/download/1.0.1/snell-server-v1.0.1-linux-amd64.zip
-unzip snell.zip -d snell
+unzip snell.zip
 rm -f snell.zip
-chmod +x /root/snell/snell-server
+chmod +x snell-server
 cd /etc/systemd/system
 
 cat > snell.service<<-EOF
@@ -19,7 +19,7 @@ Type=simple
 User=nobody
 Group=nogroup
 LimitNOFILE=32768
-ExecStart=/root/snell/snell-server -c /root/snell/snell-server.conf
+ExecStart=/root/snell-server -c /root/snell-server.conf
 
 [Install]
 WantedBy=multi-user.target
