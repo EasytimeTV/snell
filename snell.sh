@@ -27,4 +27,4 @@ EOF
 systemctl daemon-reload
 systemctl start snell
 systemctl restart snell
-cat /root/snell/snell-server.conf
+cat /root/snell-server.conf
