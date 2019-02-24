@@ -19,7 +19,7 @@ Type=simple
 User=nobody
 Group=nogroup
 LimitNOFILE=32768
-ExecStart=/root/snell-server -c /root/snell-server.conf
+ExecStart=/root/snell-server
 
 [Install]
 WantedBy=multi-user.target
