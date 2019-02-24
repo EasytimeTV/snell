@@ -15,7 +15,11 @@ Description=Snell Server
 After=network.target
 
 [Service]
-ExecStart=/root/snell-server
+Type=simple
+User=nobody
+Group=nogroup
+LimitNOFILE=32768
+ExecStart=/root/snell-server -c /snell-server.conf
 Restart=on-failure
 RestartSec=1s
 [Install]
