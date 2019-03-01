@@ -20,3 +20,7 @@ wget --no-check-certificate -O snell.sh https://raw.githubusercontent.com/caorun
 chmod +x snell.sh
 ./snell.sh
 ```
+
+## Note:
+
+这个版本在 CentOS 上没有运行成功
